@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat APP</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="title">Real Time Chat APP</div>
+      </div>
+
+      <div class="display--area" id="display--area"></div>
+      <div class="typing--area">
+        <input
+          type="text"
+          placeholder="Enter your message"
+          id="message"
+          class="input--field"
+        />
+        <button id="sendBtn" class="send--btn">SEND</button>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./backend.js"></script>
+  </body>
+</html>
