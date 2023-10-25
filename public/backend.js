@@ -16,10 +16,10 @@ socket.on("user-joined", (name) => {
   append(`${name ? name : "Someone"} Joind The Chat!`);
 });
 
-socket.on("message", (message, username) => {
+socket.on("message", (message, sender) => {
   let div = document.createElement("div");
   div.classList.add("msg--area");
-  div.innerHTML = `${message}`;
+  div.innerHTML = `<strong>${sender}:</strong> ${message}`;
   allMessages.appendChild(div);
 });
 
@@ -33,7 +33,7 @@ messageInput.addEventListener("keyup", (e) => {
 sendBtn.addEventListener("click", (e) => {
   const message = messageInput.value;
   if (message.trim()) {
-    socket.emit("user-message", message);
+    socket.emit("user-message", message, username);
     messageInput.value = "";
   }
 });
