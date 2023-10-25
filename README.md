@@ -3,9 +3,12 @@ This is a chat app build with node js and socket.io. It has also connected with 
 
 # User Guide
 dependencies:
-npm init
-npm i socket.io
-npm i mysql2
+
+1) npm init
+
+2) npm i socket.io
+
+3) npm i mysql2
 
 # Create Databse in sql workbenck
 step 1) create table
